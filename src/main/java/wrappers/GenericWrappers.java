@@ -523,6 +523,25 @@ public class GenericWrappers extends Reporter implements Wrappers {
 		}
 		return number;
 	}
+	
+	/**
+	 * This method will verify the given text is available in the element text
+	 * @param id - The locator of the object in class
+	 * @param text  - The text to be verified
+	 * @author Sundar - JuztJellyGuava
+	 */
+	public void verifyTextContainsByClass(String classVal, String text) {
+		try{
+			String sText = driver.findElementByClassName(classVal).getText();
+			if (sText.contains(text)){
+				reportStep("The text: "+sText+" contains the value :"+text, "PASS");
+			}else{
+				reportStep("The text: "+sText+" did not contain the value :"+text, "FAIL");
+			}
+		}catch (Exception e) {
+			reportStep("Unknown exception occured while verifying the title", "FAIL");
+		}
+	}
 
 
 
