@@ -1,12 +1,16 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
 import wrappers.OpentapsWrappers;
 
 public class MergeLeadPage extends OpentapsWrappers {
+	public WebDriverWait wait;
 	
 	public MergeLeadPage(RemoteWebDriver driver , ExtentTest test){
 		this.driver = driver;
@@ -28,6 +32,7 @@ public class MergeLeadPage extends OpentapsWrappers {
 		return new FindMergeLeadsPage(driver,test);
 	}
 	public MergeLeadPage mergeLead(){
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Merge")));
 		clickByLink(prop.getProperty("MergeLead.MergeButton.Link"));
 		return this;
 	}
