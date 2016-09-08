@@ -22,6 +22,15 @@ public class MyLeadsPage extends OpentapsWrappers {
 		return new CreateLeadPage(driver,test);
 	}
 	
+	public FindLeadsPage clickFindLeads(){
+		clickByLink(prop.getProperty("MyLead.FindLeads.Link"));
+		return new FindLeadsPage(driver, test);
+	}
+	
+	public MergeLeadPage clickMergeLeads(){
+		clickByLink(prop.getProperty("MyLead.MergeLead.Link"));
+		return new MergeLeadPage(driver, test);
+	}
 	
 
 
