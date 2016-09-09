@@ -360,6 +360,19 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	}
 
 	/**
+	 * This method will click the element using xpath as locator with out snap
+	 * @param xpathVal  The xpath (locator) of the element to be clicked with out snap
+	 * @author Adhi
+	 */
+	public void clickByXpathNoSnap(String xpathVal) {
+		try{
+			driver.findElement(By.xpath(xpathVal)).click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
 	 * This method will mouse over on the element using xpath as locator
 	 * @param xpathVal  The xpath (locator) of the element to be moused over
 	 * @author Babu - TestLeaf

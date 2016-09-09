@@ -21,13 +21,13 @@ public class MergeLeadPage extends OpentapsWrappers {
 	}
 	
 	public FindMergeLeadsPage clickFromLead(){
-		clickByXpath(prop.getProperty("MergeLead.FromLead.Xpath"));
+		clickByXpathNoSnap(prop.getProperty("MergeLead.FromLead.Xpath"));
 		switchToLastWindow();
 		return new FindMergeLeadsPage(driver,test);
 	}
 	
 	public FindMergeLeadsPage clickToLead(){
-		clickByXpath(prop.getProperty("MergeLead.ToLead.Xpath"));
+		clickByXpathNoSnap(prop.getProperty("MergeLead.ToLead.Xpath"));
 		switchToLastWindow();
 		return new FindMergeLeadsPage(driver,test);
 	}

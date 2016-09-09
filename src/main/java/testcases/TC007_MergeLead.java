@@ -32,9 +32,15 @@ public class TC007_MergeLead extends OpentapsWrappers{
 		new MyHomePage(driver, test).clickLeads();
 		new MyLeadsPage(driver, test).clickMergeLeads();
 		new MergeLeadPage(driver, test).clickFromLead();
-		new FindMergeLeadsPage(driver, test).enterFistname(lead1).ClickFindLeadButton().ClickFirstResultingLead();
+		new FindMergeLeadsPage(driver, test)
+		.enterFistname(lead1)
+		.clickFindLeadButton()
+		.clickFirstResultingLead();
 		new MergeLeadPage(driver, test).clickToLead();
-		new FindMergeLeadsPage(driver, test).enterFistname(lead2).ClickFindLeadButton().ClickFirstResultingLead();
+		new FindMergeLeadsPage(driver, test)
+		.enterFistname(lead2)
+		.clickFindLeadButton()
+		.clickFirstResultingLead();
 		new MergeLeadPage(driver, test).mergeLead().confirmMerge();			
 	}
 

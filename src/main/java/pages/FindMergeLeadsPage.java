@@ -25,15 +25,15 @@ public class FindMergeLeadsPage extends OpentapsWrappers {
 		return this;
 	}
 
-	public FindMergeLeadsPage ClickFindLeadButton() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("FindMergeLead.FindLeadButton.Xpath")));
-		clickByXpath(prop.getProperty("FindMergeLead.FindLeadButton.Xpath"));
+	public FindMergeLeadsPage clickFindLeadButton() {
+		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("FindMergeLead.FindLeadButton.Xpath")));
+		clickByXpathNoSnap(prop.getProperty("FindMergeLead.FindLeadButton.Xpath"));
 		return this;
 	}
 
-	public MergeLeadPage ClickFirstResultingLead() {
+	public MergeLeadPage clickFirstResultingLead() {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("FindMergeLead.FirstResultingLead.Xpath")));
-		clickByXpath(prop.getProperty("FindMergeLead.FirstResultingLead.Xpath"));
+		clickByXpathNoSnap(prop.getProperty("FindMergeLead.FirstResultingLead.Xpath"));
 		switchToParentWindow();
 		return new MergeLeadPage(driver, test);
 	}
